@@ -1,0 +1,835 @@
+{
+ "name": "Sentinel City",
+ "nodes": [
+  {
+   "id": 0,
+   "name": "1st Ave & Harbor Ave",
+   "x": -0.06,
+   "y": -0.1
+  },
+  {
+   "id": 1,
+   "name": "2nd Ave & Harbor Ave",
+   "x": 1.05,
+   "y": -0.12
+  },
+  {
+   "id": 2,
+   "name": "3rd Ave & Harbor Ave",
+   "x": 2.01,
+   "y": -0.04
+  },
+  {
+   "id": 3,
+   "name": "4th Ave & Harbor Ave",
+   "x": 2.84,
+   "y": 0.0
+  },
+  {
+   "id": 4,
+   "name": "5th Ave & Harbor Ave",
+   "x": 3.83,
+   "y": -0.02
+  },
+  {
+   "id": 5,
+   "name": "6th Ave & Harbor Ave",
+   "x": 4.85,
+   "y": -0.11
+  },
+  {
+   "id": 6,
+   "name": "1st Ave & Main St",
+   "x": -0.03,
+   "y": 1.09
+  },
+  {
+   "id": 7,
+   "name": "2nd Ave & Main St",
+   "x": 0.86,
+   "y": 0.92
+  },
+  {
+   "id": 8,
+   "name": "3rd Ave & Main St",
+   "x": 2.05,
+   "y": 1.13
+  },
+  {
+   "id": 9,
+   "name": "4th Ave & Main St",
+   "x": 3.03,
+   "y": 0.97
+  },
+  {
+   "id": 10,
+   "name": "5th Ave & Main St",
+   "x": 4.17,
+   "y": 0.87
+  },
+  {
+   "id": 11,
+   "name": "6th Ave & Main St",
+   "x": 5.13,
+   "y": 0.94
+  },
+  {
+   "id": 12,
+   "name": "1st Ave & Oak Blvd",
+   "x": -0.13,
+   "y": 1.89
+  },
+  {
+   "id": 13,
+   "name": "2nd Ave & Oak Blvd",
+   "x": 0.93,
+   "y": 2.09
+  },
+  {
+   "id": 14,
+   "name": "3rd Ave & Oak Blvd",
+   "x": 1.89,
+   "y": 2.02
+  },
+  {
+   "id": 15,
+   "name": "4th Ave & Oak Blvd",
+   "x": 3.05,
+   "y": 1.96
+  },
+  {
+   "id": 16,
+   "name": "5th Ave & Oak Blvd",
+   "x": 4.02,
+   "y": 1.88
+  },
+  {
+   "id": 17,
+   "name": "6th Ave & Oak Blvd",
+   "x": 4.84,
+   "y": 1.92
+  },
+  {
+   "id": 18,
+   "name": "1st Ave & Elm Street",
+   "x": 0.06,
+   "y": 2.98
+  },
+  {
+   "id": 19,
+   "name": "2nd Ave & Elm Street",
+   "x": 0.93,
+   "y": 3.02
+  },
+  {
+   "id": 20,
+   "name": "3rd Ave & Elm Street",
+   "x": 1.98,
+   "y": 2.94
+  },
+  {
+   "id": 21,
+   "name": "4th Ave & Elm Street",
+   "x": 3.11,
+   "y": 3.06
+  },
+  {
+   "id": 22,
+   "name": "5th Ave & Elm Street",
+   "x": 3.91,
+   "y": 3.02
+  },
+  {
+   "id": 23,
+   "name": "6th Ave & Elm Street",
+   "x": 5.01,
+   "y": 3.11
+  },
+  {
+   "id": 24,
+   "name": "1st Ave & Riverside Dr",
+   "x": 0.08,
+   "y": 3.94
+  },
+  {
+   "id": 25,
+   "name": "2nd Ave & Riverside Dr",
+   "x": 1.17,
+   "y": 3.89
+  },
+  {
+   "id": 26,
+   "name": "3rd Ave & Riverside Dr",
+   "x": 1.97,
+   "y": 4.07
+  },
+  {
+   "id": 27,
+   "name": "4th Ave & Riverside Dr",
+   "x": 2.87,
+   "y": 4.0
+  },
+  {
+   "id": 28,
+   "name": "5th Ave & Riverside Dr",
+   "x": 3.83,
+   "y": 4.05
+  },
+  {
+   "id": 29,
+   "name": "6th Ave & Riverside Dr",
+   "x": 5.1,
+   "y": 4.02
+  }
+ ],
+ "edges": [
+  {
+   "from": 0,
+   "to": 1,
+   "distance": 1.11,
+   "road": "Harbor Ave",
+   "type": "arterial",
+   "traffic": 0.81
+  },
+  {
+   "from": 1,
+   "to": 2,
+   "distance": 0.96,
+   "road": "Harbor Ave",
+   "type": "arterial",
+   "traffic": 0.39
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "distance": 0.83,
+   "road": "Harbor Ave",
+   "type": "arterial",
+   "traffic": 0.67
+  },
+  {
+   "from": 3,
+   "to": 4,
+   "distance": 0.99,
+   "road": "Harbor Ave",
+   "type": "arterial",
+   "traffic": 0.6
+  },
+  {
+   "from": 4,
+   "to": 5,
+   "distance": 1.02,
+   "road": "Harbor Ave",
+   "type": "arterial",
+   "traffic": 0.58
+  },
+  {
+   "from": 6,
+   "to": 7,
+   "distance": 0.91,
+   "road": "Main St",
+   "type": "arterial",
+   "traffic": 0.49
+  },
+  {
+   "from": 7,
+   "to": 8,
+   "distance": 1.21,
+   "road": "Main St",
+   "type": "arterial",
+   "traffic": 0.78
+  },
+  {
+   "from": 8,
+   "to": 9,
+   "distance": 0.99,
+   "road": "Main St",
+   "type": "arterial",
+   "traffic": 0.86
+  },
+  {
+   "from": 9,
+   "to": 10,
+   "distance": 1.14,
+   "road": "Main St",
+   "type": "arterial",
+   "traffic": 0.51
+  },
+  {
+   "from": 10,
+   "to": 11,
+   "distance": 0.96,
+   "road": "Main St",
+   "type": "arterial",
+   "traffic": 0.65
+  },
+  {
+   "from": 12,
+   "to": 13,
+   "distance": 1.08,
+   "road": "Oak Blvd",
+   "type": "arterial",
+   "traffic": 0.2
+  },
+  {
+   "from": 13,
+   "to": 14,
+   "distance": 0.96,
+   "road": "Oak Blvd",
+   "type": "arterial",
+   "traffic": 0.68
+  },
+  {
+   "from": 14,
+   "to": 15,
+   "distance": 1.16,
+   "road": "Oak Blvd",
+   "type": "arterial",
+   "traffic": 0.64
+  },
+  {
+   "from": 15,
+   "to": 16,
+   "distance": 0.97,
+   "road": "Oak Blvd",
+   "type": "arterial",
+   "traffic": 0.89
+  },
+  {
+   "from": 16,
+   "to": 17,
+   "distance": 0.82,
+   "road": "Oak Blvd",
+   "type": "arterial",
+   "traffic": 0.77
+  },
+  {
+   "from": 18,
+   "to": 19,
+   "distance": 0.87,
+   "road": "Elm Street",
+   "type": "arterial",
+   "traffic": 0.36
+  },
+  {
+   "from": 19,
+   "to": 20,
+   "distance": 1.05,
+   "road": "Elm Street",
+   "type": "arterial",
+   "traffic": 0.44
+  },
+  {
+   "from": 20,
+   "to": 21,
+   "distance": 1.14,
+   "road": "Elm Street",
+   "type": "arterial",
+   "traffic": 0.65
+  },
+  {
+   "from": 21,
+   "to": 22,
+   "distance": 0.8,
+   "road": "Elm Street",
+   "type": "arterial",
+   "traffic": 0.17
+  },
+  {
+   "from": 22,
+   "to": 23,
+   "distance": 1.1,
+   "road": "Elm Street",
+   "type": "arterial",
+   "traffic": 0.5
+  },
+  {
+   "from": 24,
+   "to": 25,
+   "distance": 1.09,
+   "road": "Riverside Dr",
+   "type": "arterial",
+   "traffic": 0.28
+  },
+  {
+   "from": 25,
+   "to": 26,
+   "distance": 0.82,
+   "road": "Riverside Dr",
+   "type": "arterial",
+   "traffic": 0.24
+  },
+  {
+   "from": 26,
+   "to": 27,
+   "distance": 0.9,
+   "road": "Riverside Dr",
+   "type": "arterial",
+   "traffic": 0.19
+  },
+  {
+   "from": 27,
+   "to": 28,
+   "distance": 0.96,
+   "road": "Riverside Dr",
+   "type": "arterial",
+   "traffic": 0.73
+  },
+  {
+   "from": 28,
+   "to": 29,
+   "distance": 1.27,
+   "road": "Riverside Dr",
+   "type": "arterial",
+   "traffic": 0.25
+  },
+  {
+   "from": 0,
+   "to": 6,
+   "distance": 1.19,
+   "road": "1st Ave",
+   "type": "arterial",
+   "traffic": 0.34
+  },
+  {
+   "from": 1,
+   "to": 7,
+   "distance": 1.06,
+   "road": "2nd Ave",
+   "type": "collector",
+   "traffic": 0.44
+  },
+  {
+   "from": 2,
+   "to": 8,
+   "distance": 1.17,
+   "road": "3rd Ave",
+   "type": "arterial",
+   "traffic": 0.8
+  },
+  {
+   "from": 3,
+   "to": 9,
+   "distance": 0.99,
+   "road": "4th Ave",
+   "type": "arterial",
+   "traffic": 0.21
+  },
+  {
+   "from": 4,
+   "to": 10,
+   "distance": 0.95,
+   "road": "5th Ave",
+   "type": "collector",
+   "traffic": 0.49
+  },
+  {
+   "from": 5,
+   "to": 11,
+   "distance": 1.09,
+   "road": "6th Ave",
+   "type": "arterial",
+   "traffic": 0.56
+  },
+  {
+   "from": 6,
+   "to": 12,
+   "distance": 0.81,
+   "road": "1st Ave",
+   "type": "arterial",
+   "traffic": 0.81
+  },
+  {
+   "from": 7,
+   "to": 13,
+   "distance": 1.17,
+   "road": "2nd Ave",
+   "type": "collector",
+   "traffic": 0.76
+  },
+  {
+   "from": 8,
+   "to": 14,
+   "distance": 0.9,
+   "road": "3rd Ave",
+   "type": "arterial",
+   "traffic": 0.8
+  },
+  {
+   "from": 9,
+   "to": 15,
+   "distance": 0.99,
+   "road": "4th Ave",
+   "type": "arterial",
+   "traffic": 0.36
+  },
+  {
+   "from": 10,
+   "to": 16,
+   "distance": 1.02,
+   "road": "5th Ave",
+   "type": "collector",
+   "traffic": 0.46
+  },
+  {
+   "from": 11,
+   "to": 17,
+   "distance": 1.02,
+   "road": "6th Ave",
+   "type": "arterial",
+   "traffic": 0.42
+  },
+  {
+   "from": 12,
+   "to": 18,
+   "distance": 1.11,
+   "road": "1st Ave",
+   "type": "arterial",
+   "traffic": 0.81
+  },
+  {
+   "from": 13,
+   "to": 19,
+   "distance": 0.93,
+   "road": "2nd Ave",
+   "type": "collector",
+   "traffic": 0.87
+  },
+  {
+   "from": 14,
+   "to": 20,
+   "distance": 0.92,
+   "road": "3rd Ave",
+   "type": "arterial",
+   "traffic": 0.26
+  },
+  {
+   "from": 15,
+   "to": 21,
+   "distance": 1.1,
+   "road": "4th Ave",
+   "type": "arterial",
+   "traffic": 0.28
+  },
+  {
+   "from": 16,
+   "to": 22,
+   "distance": 1.15,
+   "road": "5th Ave",
+   "type": "collector",
+   "traffic": 0.32
+  },
+  {
+   "from": 17,
+   "to": 23,
+   "distance": 1.2,
+   "road": "6th Ave",
+   "type": "arterial",
+   "traffic": 0.33
+  },
+  {
+   "from": 18,
+   "to": 24,
+   "distance": 0.96,
+   "road": "1st Ave",
+   "type": "arterial",
+   "traffic": 0.51
+  },
+  {
+   "from": 19,
+   "to": 25,
+   "distance": 0.9,
+   "road": "2nd Ave",
+   "type": "collector",
+   "traffic": 0.59
+  },
+  {
+   "from": 20,
+   "to": 26,
+   "distance": 1.13,
+   "road": "3rd Ave",
+   "type": "arterial",
+   "traffic": 0.35
+  },
+  {
+   "from": 21,
+   "to": 27,
+   "distance": 0.97,
+   "road": "4th Ave",
+   "type": "arterial",
+   "traffic": 0.15
+  },
+  {
+   "from": 22,
+   "to": 28,
+   "distance": 1.03,
+   "road": "5th Ave",
+   "type": "collector",
+   "traffic": 0.46
+  },
+  {
+   "from": 23,
+   "to": 29,
+   "distance": 0.91,
+   "road": "6th Ave",
+   "type": "arterial",
+   "traffic": 0.43
+  },
+  {
+   "from": 0,
+   "to": 7,
+   "distance": 1.37,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.33
+  },
+  {
+   "from": 7,
+   "to": 14,
+   "distance": 1.51,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.48
+  },
+  {
+   "from": 14,
+   "to": 21,
+   "distance": 1.6,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.38
+  },
+  {
+   "from": 21,
+   "to": 28,
+   "distance": 1.22,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.31
+  },
+  {
+   "from": 5,
+   "to": 10,
+   "distance": 1.19,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.35
+  },
+  {
+   "from": 10,
+   "to": 15,
+   "distance": 1.56,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.37
+  },
+  {
+   "from": 15,
+   "to": 20,
+   "distance": 1.45,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.12
+  },
+  {
+   "from": 20,
+   "to": 25,
+   "distance": 1.25,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.46
+  },
+  {
+   "from": 12,
+   "to": 19,
+   "distance": 1.55,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.41
+  },
+  {
+   "from": 16,
+   "to": 23,
+   "distance": 1.58,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.45
+  },
+  {
+   "from": 13,
+   "to": 8,
+   "distance": 1.48,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.42
+  },
+  {
+   "from": 9,
+   "to": 4,
+   "distance": 1.27,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.26
+  },
+  {
+   "from": 18,
+   "to": 25,
+   "distance": 1.44,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.26
+  },
+  {
+   "from": 11,
+   "to": 16,
+   "distance": 1.45,
+   "road": "Central Expressway",
+   "type": "highway",
+   "traffic": 0.14
+  },
+  {
+   "from": 0,
+   "to": 1,
+   "distance": 1.11,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.55
+  },
+  {
+   "from": 1,
+   "to": 2,
+   "distance": 0.96,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.23
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "distance": 0.83,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.24
+  },
+  {
+   "from": 3,
+   "to": 4,
+   "distance": 0.99,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.31
+  },
+  {
+   "from": 4,
+   "to": 5,
+   "distance": 1.02,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.29
+  },
+  {
+   "from": 5,
+   "to": 11,
+   "distance": 1.09,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.39
+  },
+  {
+   "from": 11,
+   "to": 17,
+   "distance": 1.02,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.23
+  },
+  {
+   "from": 17,
+   "to": 23,
+   "distance": 1.2,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.2
+  },
+  {
+   "from": 23,
+   "to": 29,
+   "distance": 0.91,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.28
+  },
+  {
+   "from": 29,
+   "to": 28,
+   "distance": 1.27,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.26
+  },
+  {
+   "from": 28,
+   "to": 27,
+   "distance": 0.96,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.4
+  },
+  {
+   "from": 27,
+   "to": 26,
+   "distance": 0.9,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.21
+  },
+  {
+   "from": 26,
+   "to": 25,
+   "distance": 0.82,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.68
+  },
+  {
+   "from": 25,
+   "to": 24,
+   "distance": 1.09,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.54
+  },
+  {
+   "from": 24,
+   "to": 18,
+   "distance": 0.96,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.28
+  },
+  {
+   "from": 18,
+   "to": 12,
+   "distance": 1.11,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.34
+  },
+  {
+   "from": 12,
+   "to": 6,
+   "distance": 0.81,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.39
+  },
+  {
+   "from": 6,
+   "to": 0,
+   "distance": 1.19,
+   "road": "Ring Road",
+   "type": "arterial",
+   "traffic": 0.4
+  }
+ ]
+}
