@@ -267,6 +267,7 @@ static double headlessRun(const std::string& mapJson, SimMode mode, RouterKind r
     // Same fleet layout as engine.
     std::vector<std::shared_ptr<Vehicle>> fleet;
     auto ids = g->allNodeIds();
+    // A/B arms get an identical, deterministic fleet so ONLY the intelligence differs.
     const char* types[] = {"Ambulance", "Ambulance", "FireTruck", "PoliceCar", "PoliceCar", "HazmatUnit"};
     int vid = 1;
     for (size_t i = 0; i < 6 && i < ids.size(); ++i) {
@@ -275,6 +276,8 @@ static double headlessRun(const std::string& mapJson, SimMode mode, RouterKind r
         v->id = vid++;
         v->currentNode = depot;
         v->pos = g->position(depot);
+        // Fixed departure order: incidents are assigned to the SAME vehicle in both arms.
+        v->dispatchOrder = (int)i;
         fleet.push_back(std::move(v));
     }
 
@@ -323,14 +326,16 @@ static double headlessRun(const std::string& mapJson, SimMode mode, RouterKind r
             double spd = v->maxSpeedKmh();
             auto nbrs = g->neighbors(v->currentNode);
             for (auto& n : nbrs) if (n.to == v->nextNode) { spd *= (1.0 - 0.65 * n.traffic); break; }
-            bool halted = (!sent && sig.stateOf(v->nextNode) == SignalState::RED && v->progress > 0.85);
+            bool redAhead = !sent && sig.stateOf(v->nextNode) == SignalState::RED;
+            // Baseline: approach slowly, then full stop at the stop line until green.
+            double distKm = (redAhead ? spd / v->slowdownAtRed() : spd) * (simDt / 3600.0);
+            if (redAhead && v->progress > 0.85) distKm = 0.0;
             if (sent && v->canPreemptSignals()) {
                 int idx = 0;
                 for (size_t j = 0; j < v->path.size(); ++j) if (v->path[j] == v->currentNode) { idx = (int)j; break; }
                 sig.preemptCorridor(v->path, idx, cfg.corridorLookahead, v->priorityLevel());
             }
-            if (halted) continue; // full stop until the light turns green
-            if (v->advance(spd * (simDt / 3600.0), *g)) {
+            if (v->advance(distKm, *g)) {
                 for (size_t i = 0; i < spawned; ++i) {
                     auto& inc = pending[i];
                     if (inc->id == v->assignedIncident && inc->active) {

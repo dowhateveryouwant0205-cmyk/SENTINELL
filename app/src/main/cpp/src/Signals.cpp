@@ -82,8 +82,8 @@ int SignalController::preemptCorridor(const std::vector<int>& path, int currentI
     {
         std::lock_guard<std::recursive_mutex> lk(mu_);
         int end = std::min((int)path.size() - 1, currentIndex + lookahead);
-        // Higher-priority vehicles get longer hold times.
-        int holds = 2 + priority / 2;
+        // Higher-priority vehicles get longer hold times (in signal-tick units).
+        int holds = 6 + priority;
         for (int i = std::max(1, currentIndex + 1); i <= end; ++i) {
             auto it = signals_.find(path[i]);
             if (it == signals_.end()) continue;

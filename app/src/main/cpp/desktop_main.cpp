@@ -62,13 +62,34 @@ int main(int argc, char** argv) {
     std::cout << "[OK] Simulated " << m.simMinute << " min | resolved=" << m.resolvedIncidents
               << " | avg response=" << m.avgResponseMin << " min | signal changes=" << m.signalChanges << "\n";
 
-    // 5. A/B killer metric
-    eng.runAbComparison(5);
+    // 5. A/B killer metric — headless deterministic back-to-back runs
+    eng.runAbComparison(6);
     std::string rep = eng.reportJson();
     auto pos = rep.find("\"abComparison\"");
-    std::cout << (pos != std::string::npos ? "[OK]" : "[WARN]") << " A/B comparison embedded in report\n";
-    std::cout << "---- REPORT ----\n" << rep.substr(0, 1200) << "\n...\n";
+    std::cout << (pos != std::string::npos ? "[OK]" : "[FAIL]") << " A/B comparison embedded in report\n";
+    if (pos == std::string::npos) return 1;
 
+    // Pull the headline numbers out of the report JSON.
+    auto grab = [&](const char* key) -> double {
+        auto p = rep.find(key, pos);
+        if (p == std::string::npos) return -999;
+        p = rep.find(':', p);
+        std::istringstream is(rep.substr(p + 1));
+        double v; is >> v; return v;
+    };
+    double tBase = grab("\"baselineAvgMin\"");
+    double tSent = grab("\"sentinelAvgMin\"");
+    double impr  = grab("\"improvementPct\"");
+    std::cout << ">> Baseline avg response : " << tBase << " min\n";
+    std::cout << ">> SENTINEL avg response : " << tSent << " min\n";
+    std::cout << ">> IMPROVEMENT           : " << impr << "% faster\n";
+    if (impr < 20.0) {
+        std::cerr << "[FAIL] improvement below target band (expected 40-60%)\n";
+        return 1;
+    }
+
+    std::cout << "---- DISPATCH LOG / INCIDENT DETAIL ----\n"
+              << rep.substr(0, 900) << "\n...\n";
     std::cout << "== ALL DESKTOP TESTS PASSED ==\n";
     return 0;
 }
